@@ -1,11 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 
-// Import the Display icon
 import displayIcon from "../assets/icons/Display.svg";
 
 const DropdownMenu = ({ grouping, ordering, setGrouping, setOrdering }) => {
-  const [isOpen, setIsOpen] = useState(false); // State to manage dropdown visibility
-  const dropdownRef = useRef(null); // Ref for the dropdown container
+  const [isOpen, setIsOpen] = useState(false); 
+  const dropdownRef = useRef(null); 
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -13,22 +12,19 @@ const DropdownMenu = ({ grouping, ordering, setGrouping, setOrdering }) => {
 
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-      setIsOpen(false); // Close the dropdown if clicked outside
+      setIsOpen(false); 
     }
   };
 
   useEffect(() => {
-    // Attach the click event listener when the component mounts
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
-      // Cleanup the event listener when the component unmounts
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
 
   return (
     <div className="dropdown-container" ref={dropdownRef}>
-      {/* Button to toggle dropdown */}
       <button className="dropdown-button" onClick={toggleDropdown}>
         <img src={displayIcon} alt="Display Icon" className="display-icon" />
         <span className="button-label">Display</span>
@@ -43,7 +39,6 @@ const DropdownMenu = ({ grouping, ordering, setGrouping, setOrdering }) => {
         </svg>
       </button>
 
-      {/* Dropdown menu */}
       {isOpen && (
         <div className="dropdown-menu">
           <div className="dropdown-section">

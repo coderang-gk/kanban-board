@@ -17,10 +17,10 @@ import user from "../assets/icons/user.svg";
 
 const KanbanBoard = ({ tickets, users }) => {
   const [grouping, setGrouping] = useState(() => {
-    return localStorage.getItem("grouping") || "status"; // Default to "status" if nothing is saved
+    return localStorage.getItem("grouping") || "status"; 
   });
   const [ordering, setOrdering] = useState(() => {
-    return localStorage.getItem("ordering") || "priority"; // Default to "priority" if nothing is saved
+    return localStorage.getItem("ordering") || "priority"; 
   });
   
 
@@ -88,7 +88,7 @@ const KanbanBoard = ({ tickets, users }) => {
 
   const getColumnLabel = (key) => {
     if (grouping === "userId") {
-      return key; // Directly return user name when grouping by userId
+      return key; 
     }
     switch (key) {
       case "Todo":
