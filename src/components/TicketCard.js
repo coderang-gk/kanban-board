@@ -1,6 +1,5 @@
 import React from "react";
 
-// Import status icons
 import doneIcon from "../assets/icons/Done.svg";
 import inProgressIcon from "../assets/icons/in-progress.svg";
 import noPriorityIcon from "../assets/icons/No-priority.svg";
@@ -20,7 +19,6 @@ const TicketCard = ({ ticket, grouping }) => {
     urgentPriorityIcon,
   ];
 
-  // Map statuses to icons
   const statusIcons = {
     "To Do": toDoIcon,
     "In Progress": inProgressIcon,
@@ -30,13 +28,11 @@ const TicketCard = ({ ticket, grouping }) => {
   return (
     <div className="ticket-card">
       <div className="ticket-header">
-        {/* Display the ticket ID */}
         <span className="ticket-id">{ticket.id}</span>
         <h4 className="ticket-title">{ticket.title}</h4>
       </div>
       <div className="ticket-details">
         <div className="ticket-priority">
-          {/* Only display priority icon if grouping is NOT by priority */}
           {grouping !== "priority" && ticket.priority !== undefined && (
             <img
               src={priorityIcons[ticket.priority]}
