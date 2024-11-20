@@ -82,15 +82,15 @@
   padding-right: 4%;
   gap: 1rem;
   overflow-x: auto;
-  height: calc(100vh - 2rem); /* Adjusts height to fit the viewport */
+  height: calc(100vh - 2rem); 
 }
 
 .column {
-  width: 30vw; /* 30% of the viewport width */
+  width: 30vw; 
   align-items: center;
   margin-right: 4%;
   border-radius: 8px;
-  padding: 1rem; /* Optional: Add padding inside columns */
+  padding: 1rem; 
 }
 
 .column-header h3 {
@@ -113,8 +113,8 @@
   border-radius: 8px;
   margin-bottom: 0.8rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  width: 30vw; /* 30% of the viewport width */
-  height: auto; /* Allow height to adjust based on content */
+  width: 30vw; 
+  height: auto; 
 }
 
 .ticket-header h4 {
@@ -322,32 +322,29 @@
 
 @media (max-width: 768px) {
   .columns {
-    flex-wrap: wrap; /* Allow columns to wrap */
-    justify-content: center; /* Center them on smaller screens */
+    flex-wrap: wrap; 
+    justify-content: center; 
   }
   
   .column, .ticket-card {
-    width: 90%; /* Take up most of the screen on smaller devices */
+    width: 90%; 
   }
 }
-/* Adjust padding for medium screens */
 @media (max-width: 1024px) {
   .dropdown-button {
-    margin-left: 25%; /* Less margin for medium screens */
+    margin-left: 25%;
   }
 }
 
-/* Adjust padding for small screens */
 @media (max-width: 768px) {
   .dropdown-button {
-    margin-left: 10%; /* Even less margin for small screens */
+    margin-left: 10%;
   }
 }
 
-/* Adjust padding for very small screens */
 @media (max-width: 480px) {
   .dropdown-button {
-    margin-left: 5%; /* Minimal margin for very small screens */
+    margin-left: 5%; 
   }
 }
 
